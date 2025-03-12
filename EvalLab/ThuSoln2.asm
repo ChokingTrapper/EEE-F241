@@ -26,7 +26,7 @@
 		int 21h
 		
 		call PRINTNEXTLINE ;print next line
-		call ADDTERMINATION	;add termination to the inputted string so that it is convenient to print it out
+		call ADDTERMINATION ;add termination to the inputted string so that it is convenient to print it out
 		call CHECKPALINDROME ;check if the string is palindrome
 		
 
