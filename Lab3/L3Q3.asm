@@ -43,7 +43,7 @@
 		
 		call printNextLine
 		
-		lea bx,input 		;load the first character
+		lea bx,input 			;load the first character
 		mainLoop:
 			mov al,[bx]
 			cmp al,'$' 		;iterate till you encounter $
@@ -73,15 +73,15 @@
 
 
 		checkVowel:
-        lea di, vowel 			;load the starting address of the vowel string into memory
+        	lea di, vowel 			;load the starting address of the vowel string into memory
 		and al,11011111b 		; a fancy bitwise operation to convert lowercase letters to uppercase keeping the uppercase as it is
-        mov cx,5      			; counter for our REPNE
-        cld                 	;clear direction flag
-        repne scasb         	;repeat till not a vowel
-        jne notVowel
-        inc vowelcount      	;increase vowel count if a vowel
+        	mov cx,5      			; counter for our REPNE
+        	cld                 		;clear direction flag
+        	repne scasb         		;repeat till not a vowel
+        	jne notVowel
+        	inc vowelcount      		;increase vowel count if a vowel
 		notVowel:
-			ret    				;else return normally
+			ret    			;else return normally
 			
 			
 		
